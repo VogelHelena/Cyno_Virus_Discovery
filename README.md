@@ -9,7 +9,10 @@ This repository contains scripts used for de novo assembly and annotation of vir
 Illumina sequencing reads were trimmed using FASTP (v0.23.2) with default settings. Trimmed reads were aligned with Bowtie2 (v2.5.3) to the cynomolgus macaque host genome ([GCF_012559485.2, MFA1912RKSv2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_012559485.2/)) and host reads were removed.
 
 ### De novo assembly and annotation
-All reads not mapping to the host genome were de novo assembled using MEGAHIT (v1.2.9) with default parameters. Assembled contigs were annotated using BLASTn and DIAMOND against the NCBI database for closely related species, and Cenote-Taker2 with default parameters was used to identify more divergent species. A sample was considered positive for a polyomavirus if it had at least 8 reads aligned to the viral reference genome with Bowtie2.
+All reads not mapping to the host genome were de novo assembled using MEGAHIT (v1.2.9) with default parameters. Assembled contigs were annotated using BLASTn and DIAMOND against the NCBI database for closely related species, and Cenote-Taker2 with default parameters was used to identify more divergent species. Complete polyomavirus genomes assembled through the viral discovery pipeline were used to construct a combined host and viral reference genome. Reads from all samples were realigned to this reference using Bowtie2 to quantify reads matching each polyomavirus genome. A sample was considered positive for a polyomavirus if it had at least 8 reads aligned to the viral reference genome with Bowtie2.
+
+### DNA Virome analysis
+CenoteTaker2 contig annotations were joined to coverage data and viral organisms were collapsed into taxonomic groups. Read abundance was normalized to reads per million (RPM) total filtered reads and visualized in R using ggplot2.
 
 ### Point mutation variant calling
 Genomic variants of cynomolgus macaque polyomaviruses were called using LoFreq (v2) and bcftools (SAMtools v1.21). Variants with amino acid changes were identified with SnpEff (v5.2). AlphaFold (v2.3.2) was used to predict the structure of the VP1 pentamer for MafaPyV2. Inter- and intra-host variants were mapped to the predicted structure.
