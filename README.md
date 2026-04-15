@@ -15,7 +15,7 @@ All reads not mapping to the host genome were de novo assembled using MEGAHIT (v
 Genomic variants of cynomolgus macaque polyomaviruses were called using LoFreq (v2) and bcftools (SAMtools v1.21). Variants with amino acid changes were identified with SnpEff (v5.2). AlphaFold (v2.3.2) was used to predict the structure of the VP1 pentamer for MafaPyV2. Inter- and intra-host variants were mapped to the predicted structure.
 
 ### Viral motif enrichment, density, and mutation signature analysis
-Dinucleotide and trinucleotide motif enrichments for each aligned genome were calculated using Markov modeling. Dinucleotide density was calculated across the BKPyV genome using 100-bp non-overlapping windows. Smoothed fitted lines and 95% confidence intervals of these densities were calculated. Intra-sample variants were characterized by their trinucleotide contexts and single nucleotide substitution type. All mutations detected per virus were normalized by their respective reference motif abundance and visualized using R.
+Dinucleotide and trinucleotide motif enrichments for each aligned viral genome were calculated using Markov modeling. Dinucleotide density was calculated across the viral genomes using 100-bp non-overlapping windows. Smoothed fitted lines and 95% confidence intervals of these densities were calculated. Intra-sample variants were characterized by their trinucleotide contexts and single nucleotide substitution type. All mutations detected per virus were normalized by their respective reference motif abundance and visualized using R.
 
 ---
 
