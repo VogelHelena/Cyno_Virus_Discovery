@@ -26,7 +26,7 @@ Dinucleotide and trinucleotide motif enrichments for each aligned viral genome w
 
 | Folder | Description |
 |--------|-------------|
-| [`viral_discovery/`](./viral_discovery/) | Read trimming, host read removal, de novo assembly, and contig annotation |
+| [`viral_discovery/`](./viral_discovery/) | Read trimming, host read removal, de novo assembly, contig annotation, DNA virome analysis |
 | [`variant_calling/`](./variant_calling/) | Variant calling, amino acid change identification, and AlphaFold structure prediction |
 | [`motif_mutation_analysis/`](./motif_mutation_analysis/) | Motif enrichment, dinucleotide density, and mutation signature analysis |
 
