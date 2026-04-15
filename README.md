@@ -11,7 +11,7 @@ Illumina sequencing reads were trimmed using FASTP (v0.23.2) with default settin
 ### De novo assembly and annotation
 All reads not mapping to the host genome were de novo assembled using MEGAHIT (v1.2.9) with default parameters. Assembled contigs were annotated using BLASTn and DIAMOND against the NCBI database for closely related species, and Cenote-Taker2 with default parameters was used to identify more divergent species. Complete polyomavirus genomes assembled through the viral discovery pipeline were used to construct a combined host and viral reference genome. Reads from all samples were realigned to this reference using Bowtie2 to quantify reads matching each polyomavirus genome. A sample was considered positive for a polyomavirus if it had at least 8 reads aligned to the viral reference genome with Bowtie2.
 
-### DNA Virome analysis
+### DNA virome analysis
 CenoteTaker2 contig annotations were joined to coverage data and viral organisms were collapsed into taxonomic groups. Read abundance was normalized to reads per million (RPM) total filtered reads and visualized in R using ggplot2.
 
 ### Point mutation variant calling
